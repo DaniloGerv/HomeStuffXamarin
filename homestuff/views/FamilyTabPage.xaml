@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="homestuff.views.FamilyTabPage"
+             Title="Famiglia" IconImageSource="baseline_group_white_24dp.png">
+    <ContentPage.Content>
+             <StackLayout Margin="30" Orientation="Vertical" HorizontalOptions="StartAndExpand">
+                 <Label x:Name="lblFamily" Text="La tua famiglia" FontSize="Large" Margin="20,20,0,0" TextColor="Black"/>
+                 <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="30,20,30,0">
+                        <Image Source="baseline_bookmark_black_24dp.png" Margin="0,0,10,0" VerticalOptions="Start" HeightRequest="25" WidthRequest="25"  />
+		                    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                	             <Label Text="Nome famiglia" />
+                                <Entry x:Name="familyNameEntry" />
+                             </StackLayout>
+		        </StackLayout>
+                  <StackLayout Orientation="Horizontal" HeightRequest="200" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Margin="30,20,30,0">
+                        <Image Source="baseline_group_black_24dp.png" Margin="0,0,10,0" VerticalOptions="Start" HeightRequest="25" WidthRequest="25"  />
+		                    <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
+                	             <Label Text="Componenti famigliari" />
+         		                 
+                                             <ListView x:Name="lstUsers" 
+                                                         SeparatorVisibility="Default"
+                                                         RowHeight="50"
+                                                       HasUnevenRows="True">
+                                        <ListView.ItemTemplate>
+                                                        <DataTemplate>
+                                                            <TextCell Text="{Binding lastName}" Detail="{Binding firstName}"   TextColor="Black" />          
+                                                        </DataTemplate>
+                                                    </ListView.ItemTemplate>
+                                        </ListView>
+
+                                
+                             </StackLayout>
+                            <ImageButton Source="baseline_person_add_black_24dp.png"
+                                         VerticalOptions="Start" HeightRequest="40" WidthRequest="40"
+                                         Padding="8"
+                                         Margin="20,0,0,15"
+                                         Clicked="AddMember"
+                                         Style="{StaticResource PrimaryImageButtonStyle}"/>
+		        </StackLayout>
+                 <StackLayout Padding="20" Orientation="Horizontal" VerticalOptions="EndAndExpand">
+                       <Button x:Name="leaveBtn" Clicked="LeaveClick" Text="Esci dalla famiglia" WidthRequest="100" Margin="0,20,0,0" HorizontalOptions="Start" Style="{StaticResource PrimaryButtonStyle}" />
+                      <Button x:Name="doneBtn" Clicked="DoneClick" Text="" WidthRequest="100" Margin="0,20,0,0" HorizontalOptions="EndAndExpand" Style="{StaticResource PrimaryButtonStyle}"/>
+                </StackLayout>
+             </StackLayout>
+
+
+
+     </ContentPage.Content>
+</ContentPage>

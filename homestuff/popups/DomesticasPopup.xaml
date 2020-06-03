@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage  xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+   xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:custom="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup" x:Class="homestuff.popups.DomesticasPopup"
+    Padding="40"
+                 >
+    <!--You can set an animation in the xaml file or in the csharp code behind-->
+      <pages:PopupPage.Animation>
+        <animations:ScaleAnimation 
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+    <!--You can use any elements here which are extended from Xamarin.Forms.View-->
+    <StackLayout 
+        VerticalOptions="CenterAndExpand" 
+        HorizontalOptions="CenterAndExpand" 
+        Margin="0"
+        Padding="20"
+        BackgroundColor="White">
+      <Label x:Name="lblDomesticas"  FontSize="Medium" Margin="20" TextColor="Black"/>
+             <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Margin="30,20,30,0">
+                	<Label Text="Nome compito famigliare" />
+         		    <Entry x:Name="domesticasNameEntry" Text="" Margin="0,0,0,10"/>
+                                 	<Label Text="Chi deve svolgere il compito?" />
+
+                 </StackLayout>
+           <ListView Margin="20" x:Name="lstUsers" ItemsSource="{Binding .}"
+                     SeparatorVisibility="Default"
+                     RowHeight="60" >
+    <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding lastName}" Detail="{Binding firstName}"   TextColor="Black" />          
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+           </ListView>
+                 <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand">
+           <Button Clicked="LeaveClick" x:Name="leaveBtn" Text="Cancella" HeightRequest="50" WidthRequest="100" Margin="20,20,0,0" HorizontalOptions="Start" Style="{StaticResource PrimaryButtonStyle}"/>
+           <Button Clicked="DoneClick" x:Name="doneBtn" Text="OK" WidthRequest="100" HeightRequest="50" Margin="0,20,20,0" HorizontalOptions="EndAndExpand"  Style="{StaticResource PrimaryButtonStyle}"/>
+        </StackLayout>
+    </StackLayout>
+</pages:PopupPage>

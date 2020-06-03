@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="homestuff.LoginPage">
+    <StackLayout
+        VerticalOptions="LayoutOptions.Center"
+        HorizontalOptions="FillAndExpand"
+        Orientation="Vertical"
+        Spacing="10"
+        Margin="30"
+        Padding="20">
+        <Image HeightRequest="250" WidthRequest="250" Margin="10" Source="logo.png" />
+        <Entry
+            x:Name="emailEntry"
+            Placeholder="Email"
+            Text="{Binding email}"
+            Margin="10"/>
+        <Entry
+            x:Name="passwordEntry"
+            Placeholder="Password"
+            IsPassword="True"
+            Text="{Binding password}"
+            Margin="10"/>
+        <Button
+            Text="Accedi"
+            Clicked="LoginButton_Clicked"
+            Margin="10,10,10,0"
+            Style="{StaticResource PrimaryButtonStyle}"/>
+        <Button
+            Text="Registrati"
+            Clicked="RegisterButton_Clicked"
+            Margin="10,0,10,10"
+            Style="{StaticResource PrimaryButtonStyle}"/>
+    </StackLayout>
+</ContentPage>

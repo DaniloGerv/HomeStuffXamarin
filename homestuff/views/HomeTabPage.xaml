@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="homestuff.views.HomeTabPage"
+             Title="Home" IconImageSource="baseline_home_white_24dp.png">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+        <StackLayout Margin="30" Orientation="Vertical">
+                <StackLayout Orientation="Horizontal" >
+                 <Image Source="baseline_work_black_24dp.png" Margin="0,25,5,0" VerticalOptions="Start" HeightRequest="25" WidthRequest="25"  />
+                 <Label x:Name="lblFamily" Text="Compiti famigliari" FontSize="Large" Margin="10,20,0,0" TextColor="Black"/>
+                    </StackLayout>
+		                    <StackLayout Padding="20" Orientation="Vertical" HorizontalOptions="Fill">
+                	             <Label x:Name="lblNoDomestica" IsVisible="false" Text="La tua famiglia non presenta compiti da svolgere" />
+         		                 
+                                             <ListView IsVisible="true" x:Name="lstDomesticas" 
+                                                         SeparatorVisibility="Default"
+                                                         RowHeight="50"
+                                                         HasUnevenRows="True">
+                                        <ListView.ItemTemplate>
+                                                        <DataTemplate>
+                                                            <ViewCell>
+                                                                
+                                                                <Grid Padding="10">
+	      		                                                        <Grid.RowDefinitions>
+				                                                            <RowDefinition Height="25"></RowDefinition>
+				                                                            <RowDefinition Height="25"></RowDefinition>
+		    	                                                        </Grid.RowDefinitions>
+		    	                                                        <Grid.ColumnDefinitions>
+				                                                            <ColumnDefinition Width="200"></ColumnDefinition>
+				                                                            <ColumnDefinition Width="50"></ColumnDefinition>
+                                                                            <ColumnDefinition Width="50"></ColumnDefinition>
+			                                                            </Grid.ColumnDefinitions>
+
+			                                                            <Label Grid.Row="0" Grid.Column="0" Text="{Binding domesticas.name}" TextColor="Black" LineBreakMode="TailTruncation"></Label>
+			                                                            <Label Grid.Row="1" Grid.Column="0" Text="{Binding user.DisplayName}" Font="Small"  TextColor="Gray" LineBreakMode="TailTruncation"></Label>
+                                                                        <StackLayout Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Padding="10">
+                                                                        <ImageButton  BackgroundColor="Transparent" Clicked="CompleteClick"  Source="baseline_done_black_24dp.png" Aspect="AspectFill"/>
+                                                                            </StackLayout>
+                                                                       <StackLayout Grid.Row="0" Grid.RowSpan="2" Grid.Column="2" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Padding="10">
+                                                                            <ImageButton BackgroundColor="Transparent"  ClassId="btnEdit" Clicked="EditClick"  Source="baseline_create_black_24dp.png" Aspect="AspectFill"/>
+                                                                            </StackLayout>
+                                                                       </Grid>
+                                                            </ViewCell>
+                                                        </DataTemplate>
+                                                    </ListView.ItemTemplate>
+                                        </ListView>
+
+                                
+                             </StackLayout>
+            </StackLayout>
+             <ImageButton ClassId="btnAdd" Source="baseline_add_black_24dp.png"
+                                        AbsoluteLayout.LayoutBounds="0.9,0.9,50,50"
+                                        AbsoluteLayout.LayoutFlags="PositionProportional"
+                                        Clicked="AddClick"
+                          Style="{StaticResource PrimaryImageButtonStyle}"/>
+  
+            </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>
