@@ -6,7 +6,7 @@
     </style>
     <style name="MainTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
                    <item name="android:statusBarColor">#FF6D49<</item>  
-
+        
       <item name="colorPrimary">#FF6D49</item>
         <item name="colorPrimaryDark">#F44336</item>
         <item name="colorAccent">#FFC107</item>
