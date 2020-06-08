@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "homestuff.Android", "homestuff.Android\homestuff.Android.csproj", "{DBEFDD08-DA5B-47E1-8423-9F2FED73EDC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "homestuff", "homestuff\homestuff.csproj", "{8D9DBB5B-89CC-4FF7-B467-56AB068D87B0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "homestuff", "homestuff\homestuff.csproj", "{C6C8BA61-728B-4A9D-AC2E-154B870B82A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +15,9 @@ Global
 		{DBEFDD08-DA5B-47E1-8423-9F2FED73EDC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DBEFDD08-DA5B-47E1-8423-9F2FED73EDC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DBEFDD08-DA5B-47E1-8423-9F2FED73EDC2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8D9DBB5B-89CC-4FF7-B467-56AB068D87B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8D9DBB5B-89CC-4FF7-B467-56AB068D87B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8D9DBB5B-89CC-4FF7-B467-56AB068D87B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8D9DBB5B-89CC-4FF7-B467-56AB068D87B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6C8BA61-728B-4A9D-AC2E-154B870B82A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6C8BA61-728B-4A9D-AC2E-154B870B82A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6C8BA61-728B-4A9D-AC2E-154B870B82A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6C8BA61-728B-4A9D-AC2E-154B870B82A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

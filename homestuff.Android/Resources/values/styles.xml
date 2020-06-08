@@ -2,9 +2,6 @@
 <resources>
     <style name="MainTheme" parent="MainTheme.Base">
       
-        <item name="colorAccent">#FFC107</item>
-             <item name="android:statusBarColor">#FF6D49<</item>  
-
 
     </style>
     <!-- Base theme applied no matter what API -->

@@ -206,7 +206,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\homestuff\homestuff.csproj">
-      <Project>{8D9DBB5B-89CC-4FF7-B467-56AB068D87B0}</Project>
+      <Project>{C6C8BA61-728B-4A9D-AC2E-154B870B82A3}</Project>
       <Name>homestuff</Name>
     </ProjectReference>
   </ItemGroup>
