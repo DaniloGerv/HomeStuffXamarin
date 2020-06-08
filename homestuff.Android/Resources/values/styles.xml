@@ -4,24 +4,18 @@
       
 
     </style>
-    <!-- Base theme applied no matter what API -->
     <style name="MainTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
                    <item name="android:statusBarColor">#FF6D49<</item>  
 
       <item name="colorPrimary">#FF6D49</item>
-        <!-- colorPrimaryDark is used for the status bar -->
         <item name="colorPrimaryDark">#F44336</item>
-        
-        <!-- colorAccent is used as the default value for colorControlActivated
-         which is used to tint widgets -->
         <item name="colorAccent">#FFC107</item>
-        <!-- You can also set colorControlNormal, colorControlActivated
-         colorControlHighlight and colorSwitchThumbNormal. -->
         <item name="windowActionModeOverlay">true</item>
     </style>
     <style name="AppCompatDialogStyle" parent="Theme.AppCompat.Light.Dialog">
         <item name="colorAccent">#FF4081</item>
     </style>
 </resources>
+
 
 
